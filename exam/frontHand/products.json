@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "name": "laal",
+      "color": "red",
+      "id": 1
+    },
+    {
+      "name": "neela",
+      "color": "blue",
+      "id": 2
+    },
+    {
+      "name": "hara",
+      "color": "Green",
+      "id": 3
+    },
+    {
+      "name": "Hello",
+      "color": "Hi",
+      "id": 4
+    },
+    {
+      "name": "laal",
+      "color": "red",
+      "id": 5
+    }
+  ]
+}

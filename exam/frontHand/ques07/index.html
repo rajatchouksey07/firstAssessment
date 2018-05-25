@@ -1,0 +1,15 @@
+<title>Ques07</title>
+<input type="checkbox" id="cb" onchange="Check()"/> CheckBox <br /><br />
+
+<input type="button" id="chk" value="Check" disabled/>
+
+<script type="text/javascript">
+    function Check() {
+        var cb = document.getElementById("cb");
+        if (cb.checked) {
+            document.getElementById('chk').disabled = !true; 
+        } else {
+            document.getElementById('chk').disabled = true; 
+        }
+    }
+</script>

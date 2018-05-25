@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ques03</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <input type="checkbox" id="all"/> Select All <br>
+    <input type="checkbox" class="cb" name="check[]"> CB1 <br>
+    <input type="checkbox" class="cb" name="check[]"> CB2 <br>
+    <input type="checkbox" class="cb" name="check[]"> CB3 <br>
+    <input type="checkbox" class="cb" name="check[]"> CB4 <br>
+    <input type="checkbox" class="cb" name="check[]"> CB5 <br>
+    <input type="checkbox" class="cb" name="check[]"> CB6 <br>
+
+    <script>
+        $("#all").change
+        (
+            function()
+            { 
+                var status = this.checked; 
+                $('.cb').each
+                (
+                    function()
+                    {
+                        this.checked = status;         
+                    }
+                );
+            }
+        );
+
+        $('.cb').change
+        (
+            function()
+            {   
+                if(this.checked == false)
+                { 
+                    $("#all")[0].checked = false;
+                }
+                if ($('.cb:checked').length == $('.cb').length )
+                { 
+                    $("#all")[0].checked = true;
+                }
+            }
+        );
+    </script>
+</body>
+</html>

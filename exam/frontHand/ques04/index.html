@@ -1,0 +1,84 @@
+<title>Ques04</title>
+<script type="text/javascript" src="main.js"></script>
+<body>
+    <form name="myForm">
+        <table align="center" cellpadding="10">
+            <tr>
+                <td>First Name</td>
+                <td>
+                    <input id="First_Name" type="text" name="First_Name" maxlength="30" autocomplete="on" autofocus onblur="isFirstNameEmpty(this, document.getElementById('first_name_help'));" required/>
+                    <p id="first_name_help"></p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Last Name</td>
+                <td>
+                    <input type="text" name="Last_Name" id="Last_Name" maxlength="30" autocomplete="on" onblur="isLastNameEmpty(this, document.getElementById('last_name_help'));" required/>
+                    <p id="last_name_help"></p>
+                </td>
+            </tr>
+
+			<tr>
+					<td>Age</td>
+					<td>
+						<input type="number" name="age" id="age" maxlength="3" autocomplete="on" required/>
+						<p id="age_help"></p>
+					</td>
+				</tr>
+
+            <tr>
+                <td>Gender</td>
+                <td>
+                    Male <input type="radio" name="Gender" value="Male" onblur="isGenderValid(this, getElementById('gender_help'));" required/> Female <input type="radio" name="Gender" value="Female" />
+                    <p id="gender_help"></p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Degree
+                </td>
+                <td>
+
+                    <select>
+                     <option value="Btech">b.e</option>
+                    <option value="Mca">m.e.</option>
+                     <option value="Bca">mba</option>
+                     <option value="B.com">bca</option>
+                     </select>
+                </td>
+            </tr>
+
+            
+            <tr>
+                <td>Mobile No.</td>
+                <td>
+					<select>
+						<option>+91</option>
+					</select>
+                    <input type="text" name="Mobile_Number" id="Mobile_Number" maxlength="10" autocomplete="on" onkeypress="return isNumberKey(event, getElementById('mobile_help1'));" onblur="isMobileValid(this, getElementById('mobile_help'));" required />
+                    <p id="mobile_help1"></p>
+                    <p id="mobile_help"></p>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdLabel"><label for="register_password" class="label">Password</label> </td>
+                <td><input type="password" id="register_password" name="psw" maxlength="12" onblur="isPassword(this, document.getElementById('password_help'))" required/></td>
+            </tr>
+            <tr>
+                <td colspan="2"><span id="password_help"></span></td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Submit" onclick="validateForm();" />
+                    <input type="reset" value="Reset" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
